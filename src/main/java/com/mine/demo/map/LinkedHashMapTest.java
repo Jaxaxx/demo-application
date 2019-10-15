@@ -1,16 +1,15 @@
 package com.mine.demo.map;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.LinkedHashMap;
 
 /**
- * 存入顺序和取出顺序不一致：无序
+ * 存入顺序和取出顺序一致：有序
  */
-public class HashMapTest {
+public class LinkedHashMapTest {
 
     public static void main(String[] args) {
 
-        Map<Integer, Integer> map = new HashMap<>();
+        LinkedHashMap<Integer, Integer> map = new LinkedHashMap<>();
 
         map.put(11, 1);
         map.put(65, 2);
@@ -24,5 +23,6 @@ public class HashMapTest {
         map.forEach((k, v) -> {
             System.out.println(k + " : " + v);
         });
+
     }
 }
