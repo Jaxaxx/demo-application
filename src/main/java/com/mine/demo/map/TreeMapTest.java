@@ -1,35 +1,37 @@
 package com.mine.demo.map;
 
 
-import java.util.*;
+import java.util.Map;
+import java.util.TreeMap;
 
+/**
+ * 默认会按照key排序吗，由小到大
+ */
 public class TreeMapTest {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
-        Map<Object, Object> map = new TreeMap<>();
+        Map<String, Integer> map = new TreeMap<>();
 
-        map.put(1, UUID.randomUUID().toString());
-        map.put(65, UUID.randomUUID().toString());
-        map.put(3, UUID.randomUUID().toString());
-        map.put(5, UUID.randomUUID().toString());
-        map.put(4, UUID.randomUUID().toString());
+//        map.put(11, 1);
+//        map.put(65, 2);
+//        map.put(31, 3);
+//        map.put(15, 4);
+//        map.put(14, 5);
+//        map.put(22, 6);
+//        map.put(10, 7);
+//        map.put(16, 8);
 
+        map.put("a", 1);
+        map.put("b", 2);
+        map.put("g", 3);
+        map.put("f", 4);
+        map.put("d", 5);
+        map.put("cc", 6);
 
         map.forEach((k, v) -> {
             System.out.println(k + " : " + v);
         });
-
-        System.out.println("---------------------------");
-
-//        Iterator<Integer> iterator = map.keySet().iterator();
-//        while (iterator.hasNext()) {
-//            Integer aLong = iterator.next();
-//            System.out.println(aLong + " : " + map.get(aLong));
-//        }
-
-
-
 
     }
 }
