@@ -12,7 +12,6 @@ public class HashMapTest {
 
         int hash = hash(1);
         System.out.println(hash);
-
     }
 
     /**
